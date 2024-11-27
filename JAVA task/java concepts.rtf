@@ -1,0 +1,303 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs40\lang9 SANDHIYA S-ACE12362-TRAINEE\par
+
+\pard\sa200\sl276\slmult1\fs22 1. how many child class can parent have?\b0\par
+Most programming languages do not impose a hard limit on the number of child classes that a parent class can have.\par
+The number of child classes usually doesn\rquote t directly affect performance, but excessive use of inheritance could introduce complexity, which might indirectly impact performance.\par
+\b 2.is dictionaries there in java?\b0\par
+no.instead we have hashmap.\par
+\b 3. difference between class and interface\b0\par
+\b class\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 A blueprint for creating objects. It contains fields (variables) and methods (functions).\par
+{\pntext\f2\'B7\tab}To define the structure and behavior of objects.\par
+{\pntext\f2\'B7\tab}Can have instance variables (specific to an object) and static variables.\par
+
+\pard\sa200\sl276\slmult1\b interface\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 A contract that defines methods a class must implement.\par
+{\pntext\f2\'B7\tab}To enforce a specific set of behaviors across different classes.\par
+{\pntext\f2\'B7\tab}Can only have public static final variables (constants).\par
+
+\pard\sa200\sl276\slmult1 4. \par
+\b Collection Interface:\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 It's like a rulebook that tells how to work with groups of data.\par
+{\pntext\f2\'B7\tab}It\rquote s used to create and use collections like lists or sets.\par
+
+\pard\sa200\sl276\slmult1 example:\par
+Collection<String> items = new ArrayList<>();\par
+items.add("Apple");  // Adding an item\par
+items.add("Banana");\par
+System.out.println(items.size());--------->to know the size of the data which is there inside the collection\par
+\b Collection Class:\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 It's like a helper that gives you tools to work with collections.\par
+{\pntext\f2\'B7\tab}Example: You have a list of items and want to sort or shuffle them. \par
+
+\pard\sa200\sl276\slmult1 ArrayList<String> items = new ArrayList<>();\par
+items.add("Banana");\par
+items.add("Apple");\par
+\par
+Collections.sort(items);  ------->to  Sorts the list.\par
+System.out.println(items); // Prints: [Apple, Banana]\par
+\par
+\b 5.Hashset\b0\par
+HashSet in Java implements the Set interface of Collections Framework. It is used to store the unique elements and it doesn\rquote t maintain any specific order of elements.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Can store the Null values.\par
+{\pntext\f2\'B7\tab}Uses HashTable internally.\par
+{\pntext\f2\'B7\tab}HashSet is not thread-safe. So to make it thread-safe, synchronization needed externally.\par
+
+\pard\sa200\sl276\slmult1\b 6.Treeset\b0\par
+TreeSet provides an implementation of the Set interface that uses a tree for storage. Objects are stored in a sorted and ascending order. Access and retrieval times are quite fast, which makes TreeSet an excellent choice when storing large amounts of sorted information that must be found quickly.\par
+\b 7.\par
+throw\par
+\b0 Purpose: Used to explicitly throw an exception from your code.\par
+Where it\rquote s used: Inside a method or block of code.\par
+How it works:\par
+You create an exception object (e.g., new Exception) and throw it using the throw keyword.\par
+Once thrown, the execution stops at that point unless the exception is caught in a try-catch block.\par
+\b Throws\par
+\b0 throws keyword is used in method declarations to indicate that the method may throw one or more exceptions. It informs the caller of the method about the types of exceptions that might occur during the method's execution, enabling the caller to handle those exceptions appropriately.\par
+\b 8.method overloading:\b0\par
+ class Calculator \{\par
+        int add(int a, int b) \{\par
+            return a + b;\par
+        \}\par
+    \par
+        double add(double a, double b) \{\par
+            return a + b;\par
+        \}\par
+    \par
+        int add(int a, int b, int c) \{\par
+            return a + b + c;\par
+        \}\par
+    \}\par
+    \par
+    public class polymorphism \{\par
+        public static void main(String[] args) \{\par
+            Calculator calc = new Calculator();\par
+            System.out.println(calc.add(2, 3));           // Output: 5\par
+            System.out.println(calc.add(2.5, 3.5));       // Output: 6.0\par
+            System.out.println(calc.add(1, 2, 3));        // Output: 6\par
+        \}\par
+    \}\par
+    \par
+9.\par
+\b Advantages of Method Overloading\par
+\b0 Improved Code Readability and Clarity:\par
+\par
+Using the same method name for similar functionality with different inputs makes the code more intuitive and easier to understand.\par
+Convenience for Developers:\par
+\par
+It provides flexibility to call the same method with different parameter sets without creating separate method names, reducing confusion.\par
+ Compile-Time Polymorphism:\par
+\par
+The method call is resolved at compile time, leading to faster execution and fewer runtime errors.\par
+Code Reusability:\par
+\par
+Common functionality is grouped under a single method name, avoiding duplication of logic across multiple methods.\par
+Flexibility:\par
+\par
+Supports multiple scenarios (e.g., handling integers, doubles, or varying numbers of parameters) without additional effort.\par
+\par
+10.\par
+\b Advantages of Method Overriding\b0\par
+Runtime Polymorphism:\par
+\par
+Enables dynamic behavior at runtime, where the method executed depends on the actual object, not the reference type. This makes programs more flexible.\par
+Customization:\par
+\par
+Subclasses can modify the behavior of inherited methods to provide more specific functionality as needed.\par
+Code Reusability:\par
+\par
+Promotes code reuse by inheriting and overriding only the required methods, avoiding redundancy.\par
+Extensibility:\par
+\par
+Allows for extending the functionality of an existing class in a controlled and organized way.\par
+Promotes Loose Coupling:\par
+\par
+Overriding works well with abstraction (using interfaces and abstract classes), allowing systems to rely on behavior, not specific implementations.\par
+\b 11.ARRAY:\b0\par
+import java.util.Scanner;\par
+\par
+public class polymorphism \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+\par
+        System.out.print("Enter the number of names: ");\par
+        int size = scanner.nextInt();\par
+        scanner.nextLine(); // Consume the newline character\par
+\par
+        String[] names = new String[size];\par
+\par
+        System.out.println("Enter " + size + " names:");\par
+        for (int i = 0; i < size; i++) \{\par
+            names[i] = scanner.nextLine(); // Read a line of input\par
+        \}\par
+\par
+        System.out.println("You entered:");\par
+        for (String name : names) \{\par
+            System.out.println(name);\par
+        \}\par
+\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\b 12. 15 Interfaces name:\b0\par
+Runnable \f1\endash  Represents a task that can run in a thread.\par
+Comparable \endash  Defines a method to compare objects for sorting.\par
+Cloneable \endash  Indicates that an object can be cloned.\par
+Serializable \endash  Marks an object for serialization.\par
+Collection \endash  The root interface in the Java Collections Framework.\par
+List \endash  Represents an ordered collection of elements.\par
+Map \endash  Represents a mapping between key-value pairs.\par
+Set \endash  Represents a collection with no duplicate elements.\par
+Iterator \endash  Provides methods to iterate over a collection.\par
+Queue \endash  Represents a collection that follows the FIFO (First-In-First-Out) principle.\par
+Custom/Domain-Specific Interface Ideas\par
+Shape \endash  Defines methods like draw() and getArea() for graphical shapes.\par
+PaymentProcessor \endash  Defines methods like processPayment() for handling payments.\par
+NotificationSender \endash  Provides methods like sendEmail() or sendSMS() for notifications.\par
+DataValidator \endash  Contains methods like validateInput() for data validation.\par
+UserAuthentication \endash  Defines methods like login() and logout() for authentication systems.\par
+\par
+\b\f0\lang1033 13.Map:\b0\line import java.util.HashMap;\par
+import java.util.LinkedHashMap;\par
+import java.util.TreeMap;\par
+\par
+public class maps \{\par
+    public static void main(String[] args) \{\par
+        HashMap <String,String> h=new HashMap<>();\par
+        h.put("name","sandhiya");\par
+        h.put("area","kovai");\par
+        \par
+        System.out.println(h.get("name"));\par
+        System.out.println(h);\par
+\par
+        TreeMap<String, Integer> map = new TreeMap<>();\par
+        map.put("Alice", 30);\par
+        map.put("Charlie", 35);\par
+        map.put("Bob", 25);\par
+        System.out.println(map);\par
+\par
+        LinkedHashMap<String, Integer> map1= new LinkedHashMap<>();\par
+        map1.put("Charlie", 30);\par
+        map1.put("Alice", 25);\par
+        map1.put("Bob", 35);\par
+\par
+        System.out.println(map1);\par
+\par
+    \par
+\}\par
+\}\par
+\b\par
+14.collection:\par
+program implementation:\par
+1.Arrray list,Linked list,queue:\par
+\b0 import java.util.ArrayList;\par
+import java.util.LinkedList;\par
+import java.util.Queue;\par
+\par
+public class collection\{\par
+    public static void main(String[] args) \{\par
+        ArrayList<String> list = new ArrayList<>();//\par
+        list.add("Alice");\par
+        list.add("Bob");\par
+        list.add("Charlie");\par
+        System.out.println(list); \par
+    \par
+\par
+//linked list\par
+       LinkedList<String> linked = new LinkedList<>();\par
+     // Add elements to the LinkedList\par
+       linked.add("sandhiya");\par
+       linked.add("janani");\par
+       linked.add("janu");\par
+       System.out.println("Initial LinkedList: " + linked);\par
+       //queue\par
+       Queue<String> queue = new LinkedList<>();\par
+        queue.add("Ab");\par
+        queue.add("Bo");\par
+        queue.add("Cha");\par
+        System.out.println(queue.poll()); // Output: Alice\par
+        System.out.println(queue); \par
+    \}\par
+\}\par
+\b\par
+2. Deque\b0 :\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Double-Ended Queue\par
+{\pntext\f2\'B7\tab}It is a linear collection that allows elements to be added or removed from both ends (the front and the back) efficiently. \par
+{\pntext\f2\'B7\tab}This is different from a regular queue, where elements can only be added at the back and removed from the front (FIFO \f1\endash  First In, First Out).\f0\par
+
+\pard\sa200\sl276\slmult1 import java.util.Deque;\par
+import java.util.LinkedList;\par
+\par
+public class Deque1 \{\par
+    public static void main(String[] args) \{\par
+        \par
+        Deque<String> deque = new LinkedList<>();\par
+\par
+       \par
+        deque.addFirst("Alice");\par
+        deque.addLast("Bob");\par
+        deque.addFirst("Charlie");\par
+        deque.addLast("Dave");\par
+\par
+        System.out.println("Deque after adding elements: " + deque);\par
+\par
+        String firstRemoved = deque.removeFirst(); \par
+        String lastRemoved = deque.removeLast();   \par
+\par
+        System.out.println("Removed first element: " + firstRemoved);\par
+        System.out.println("Removed last element: " + lastRemoved);\par
+        System.out.println("Deque after removal: " + deque);\par
+\par
+        \par
+        System.out.println("First element: " + deque.peekFirst());\par
+        System.out.println("Last element: " + deque.peekLast());\par
+    \}\par
+\}\par
+\b\lang9 Set:\par
+Hahset,linkedhashset,treeset:\par
+\b0        // Set\par
+\b       //hashset\par
+\b0    \par
+        HashSet<String> set = new HashSet<>();\par
+\par
+        set.add("jan");\par
+        set.add("Babu");\par
+        set.add("demo");\par
+        set.add("demo"); // Duplicate, will not be added\par
+\par
+        System.out.println("HashSet: " + set);\par
+\b //linkedhashset\b0\par
+        System.out.println("HashSet: " + set);\par
+\par
+        LinkedHashSet<Integer> linkedset = new LinkedHashSet<>();\par
+\par
+        linkedset.add(1);\par
+        linkedset.add(6);\par
+        linkedset.add(0);\par
+        linkedset.add(55); // Duplicate, will not be added and maintain order of the element\par
+\par
+        System.out.println("LinkedHashSet: " + linkedset);\par
+\b //TreeSet\b0\par
+        TreeSet<Integer> treeset = new TreeSet<>();\par
+\par
+        treeset.add(3);\par
+        treeset.add(1);\par
+        treeset.add(2);\par
+        treeset.add(3); // Duplicate, will not be added\par
+\par
+        System.out.println("TreeSet: " + treeset);\par
+    \par
+\par
+\par
+\par
+}
+ 
